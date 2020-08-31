@@ -29,6 +29,38 @@ const valuesContainer = document.querySelector(".app__values");
 
 const desktopViev = window.matchMedia("screen and (min-width:500px)");
 
+
+
+//funkcja będzie renderować wartości odżycze na mobilkach, w postaci listy
+const draw_Mobile_Values = () => {
+    valuesContainer.innerHTML = ""; //czyszczenie elementu
+    let ul = document.createElement('ul');
+
+    values.forEach(spr => {
+        let li = document.createElement("li");
+
+        let div_name = document.createElement('div');
+        div_name.innerHTML = `Name: ${spr.name}`;
+        let div_calories = document.createElement('div');
+        div_calories.innerHTML = `Calories: ${spr.calories}`;
+        let div_fat = document.createElement('div');
+        div_fat.innerHTML = `Fat: ${spr.fat}`;
+        let div_carbs = document.createElement('div');
+        div_carbs.innerHTML = `Carb: ${spr.carbs}`;
+
+        li.append(div_name, div_calories,div_fat, div_carbs);
+
+        ul.appendChild(li);
+    })
+    
+
+
+    valuesContainer.appendChild(ul);
+}
+
+draw_Mobile_Values();
+
+
 // funkcja będzie renderować wartości odżywcze w wersji na komputer, postać tablicy
 const draw_Desktop_Values = () => {
   valuesContainer.innerHTML = ""; //czyszczenie elementu
@@ -50,4 +82,4 @@ const draw_Desktop_Values = () => {
   valuesContainer.appendChild(table); //wkładamy table do .app__values
 };
 
-draw_Desktop_Values();
+//draw_Desktop_Values();

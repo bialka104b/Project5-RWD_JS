@@ -1,0 +1,13 @@
+@import "./variables";
+
+ul {
+    margin-top: $main-spacing;
+  li {
+    margin-bottom: $main-spacing/2;
+    padding-bottom: $main-spacing/2;
+    border-bottom: 1px solid $color-primary;
+    div {
+        line-height: 1.5;
+    }
+  }
+}

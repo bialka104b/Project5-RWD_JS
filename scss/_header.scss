@@ -1,10 +1,9 @@
 @import "./variables";
 .header {
+  padding: $main-spacing 0;
   background-color: $color-primary;
   color: white;
-  padding: $main-spacing 0;
   margin-bottom: $main-spacing;
-
   .header__content {
     display: flex;
     align-items: center;
