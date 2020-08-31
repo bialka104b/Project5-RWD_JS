@@ -5,11 +5,11 @@
   padding: $main-spacing 0;
   margin-bottom: $main-spacing;
 
-  .header--content {
+  .header__content {
     display: flex;
     align-items: center;
 
-    .header--logo {
+    .header__logo {
       margin-right: $main-spacing/2;
       width: $main-spacing * 2;
     }
