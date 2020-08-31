@@ -1,0 +1,16 @@
+@import "./variables";
+table {
+    width: 100%;
+    thead {
+        border-bottom:  2px solid darken($color-primary, 20%);
+        color: white;
+        background-color: $color-primary;
+    }
+    tr {
+        border-bottom: 1px solid lightyellow;
+    }
+    td, th {
+        padding: $main-spacing/4;
+        text-align: center;
+    }
+}
