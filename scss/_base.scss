@@ -3,7 +3,33 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 0 0$main-spacing;
+  padding: 0 $main-spacing 0 $main-spacing;
+  p {
+    text-align: center;
+  }
+  .app__contact-method {
+    font-weight: 600;
+    &:nth-of-type(1) {
+      margin-top: $main-spacing;
+      margin-bottom: $main-spacing/3;
+
+    }
+    &:nth-of-type(2) {
+      margin-top: $main-spacing/3;
+      margin-bottom: $main-spacing;
+      span::before {
+        color:$color-primary;
+      }
+    }
+    a {
+      
+      text-decoration: none;
+      color: $color-primary;
+      &:hover {
+        color:darken($color-primary, $amount: 20%);
+      }
+    }
+  }
 }
 
 img {
